@@ -17,9 +17,15 @@ def jogo(player, maquina):
 
 
 opcoes = ["Pedra", "Papel", "Tesoura"]
-maquina = random.choice(opcoes)
 
-opcao = int(input("1-Pedra, 2-Papel, 3-Tesoura: "))
-player = opcoes[opcao - 1]
+while True:
+  opcao = int(input("0-Sair, 1-Pedra, 2-Papel, 3-Tesoura: "))
 
-jogo(player, maquina)
+  if opcao == 0:
+    break
+
+  maquina = random.choice(opcoes)
+  player = opcoes[opcao - 1]
+
+  jogo(player, maquina)
+  print()
