@@ -1,4 +1,3 @@
-/* Lógico_1: */
 DROP TABLE IF EXISTS Pedidos;
 DROP TABLE IF EXISTS Clientes;
 DROP TABLE IF EXISTS Produtos;
@@ -22,12 +21,12 @@ CREATE TABLE Pedidos (
     cliente_id INTEGER,
     produto_id INTEGER
 );
- 
+
 ALTER TABLE Pedidos ADD CONSTRAINT FK_Pedidos_2
     FOREIGN KEY (cliente_id)
     REFERENCES Clientes (cliente_id)
     ON DELETE CASCADE;
- 
+
 ALTER TABLE Pedidos ADD CONSTRAINT FK_Pedidos_3
     FOREIGN KEY (produto_id)
     REFERENCES Produtos (produto_id)
@@ -41,20 +40,20 @@ INSERT INTO Clientes (cliente_id , nome_cliente , cidade_cliente) VALUES
 (5 , 'Thomas' , 'São Paulo');
 
 INSERT INTO Produtos (produto_id , produto_nome , produto_preco , categoria) VALUES
-(1 , 'Elder Ring' ,  249.90 , 'RPG'),
-(2 , 'Minecraft' ,  99.90 , 'Sandbox'),
-(3 , 'Hollow Knight' ,  46.99 , 'Aventura'),
-(4 , 'GTA V' ,  79.90 , 'Aventura'),
-(5 , 'Cyberpunk 2077' ,  199.90 , 'RPG');
+(1 , 'Elden Ring' , 249.90 , 'RPG'),
+(2 , 'Minecraft' , 99.90 , 'Sandbox'),
+(3 , 'Hollow Knight' , 46.99 , 'Aventura'),
+(4 , 'GTA V' , 79.90 , 'Aventura'),
+(5 , 'Cyberpunk 2077' , 199.90 , 'RPG');
 
 INSERT INTO Pedidos (ID , quantidade , cliente_id , produto_id) VALUES
-(  1 ,  1 ,  1 ,  2),
-(  2 ,  1 ,  3 ,  1),
-(  3 ,  2 ,  5 ,  1),
-(  4 ,  3 ,  1 ,  3),
-(  5 ,  3 ,  2 ,  3),
-(  6 ,  5 ,  5 ,  1),
-(  7 ,  5 ,  3 ,  4);
+(1 , 2 , 1 , 1),
+(2 , 1 , 1 , 3),
+(3 , 1 , 2 , 5),
+(4 , 3 , 3 , 1),
+(5 , 2 , 3 , 2),
+(6 , 1 , 5 , 4),
+(7 , 4 , 5 , 3);
 
 SELECT produto_nome , produto_preco
 FROM Produtos
