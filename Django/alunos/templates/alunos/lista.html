@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+<ul>
+    {% for aluno in alunos %}
+    <li>
+        <strong>{{ aluno.nome }}</strong> - {{ aluno.curso }}<br>
+        {{ aluno.descricao }}<br>
+        <a href="/alunos/{{ aluno.nome }}/">Ver detalhes</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/">Voltar ao início</a>

@@ -13,3 +13,4 @@ config.json
 # Backups grandes ou dumps locais do PostgreSQL
 *.dump
 *.bak
+venv/
