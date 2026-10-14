@@ -1,0 +1,15 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações do VS Code e ferramentas locais
+.vscode/
+*.log
+
+# Arquivos de conexão/senhas (nunca suba senhas no GitHub)
+.env
+config.json
+
+# Backups grandes ou dumps locais do PostgreSQL
+*.dump
+*.bak
